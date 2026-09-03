@@ -1,116 +1,71 @@
 # YourCloudDude
 
-**Practical AWS, Cloud & Python projects for developers who learn by building.**
+**Practical AWS, cloud, Terraform, and Python projects for developers who learn by building.**
 
 > Build it. Understand it. Explain it.
 
-YourCloudDude creates hands-on technical projects that go beyond copy-paste tutorials. Each repository is designed to help learners understand not only **how** something works, but **why** it is built that way.
+Most tutorial repositories stop when the happy path works. These projects spend more time on the parts that make the design worth discussing: **why a boundary exists, what can fail, what should never be public, and what changes when the system grows.**
 
-## Explore by Area
-
-### ☁️ AWS Projects
-Hands-on AWS implementations focused on real service interactions, infrastructure, security, reliability, cost, and trade-offs.
-
-- **[AWS Serverless URL Shortener](https://github.com/yourclouddude/aws-serverless-url-shortener)** — API Gateway, Lambda, DynamoDB, IAM, Python, AWS SAM, testing, TTL, and CI.
-
-### 🏗️ AWS Architecture
-Architecture-focused implementations and breakdowns covering service boundaries, failure modes, scaling, observability, IAM, networking, and cost. New architecture repositories are added only when the implementation and documentation meet the YourCloudDude quality standard.
-
-### 🐍 Python Engineering
-Practical Python automation and developer tooling with safety, testing, maintainability, and clear engineering decisions.
-
-- **[Python Safe File Organizer](https://github.com/yourclouddude/python-safe-file-organizer)** — `pathlib`, CLI design, preview-before-change workflows, collision-safe operations, manifests, rollback, pytest, Ruff, and GitHub Actions.
-
-### 🧱 Infrastructure as Code & Cloud Tools
-Terraform, AWS SAM, CI/CD, monitoring, cost tooling, and cloud developer utilities will be organized here as the portfolio grows.
-
-## Featured Projects
+## Start with a project
 
 ### [AWS Serverless URL Shortener](https://github.com/yourclouddude/aws-serverless-url-shortener)
 
-A production-minded serverless learning project built with **Amazon API Gateway, AWS Lambda, DynamoDB, IAM, Python, and AWS SAM**.
+A small API where the useful lessons are bigger than shortening a URL: conditional DynamoDB writes, short-code collisions, application-level expiration, IAM boundaries, and the controls a public creation endpoint would still need.
 
-**Learn:**
-- API Gateway → Lambda request flow
-- DynamoDB key-value access patterns
-- conditional writes and short-code collisions
-- TTL and application-level expiration
-- least-privilege IAM
-- serverless testing and CI
-- security, cost, and scaling trade-offs
+**Stack:** API Gateway · Lambda · DynamoDB · IAM · Python · AWS SAM
 
----
+### [AWS Event-Driven Image Pipeline](https://github.com/yourclouddude/aws-event-driven-image-pipeline)
+
+An asynchronous image-processing pipeline built around a deliberate `S3 → SQS → Lambda` boundary. It shows why buffering matters, how partial batch failures work, what happens to poison messages, and why compressed file size alone is not enough protection for an image worker.
+
+**Stack:** S3 · SQS · Lambda · DLQ · CloudWatch · IAM · Python · AWS SAM
+
+### [Terraform AWS Three-Tier Web Stack](https://github.com/yourclouddude/terraform-aws-three-tier-web-stack)
+
+A Terraform project about network boundaries rather than architecture-diagram decoration: a public ALB, private EC2 Auto Scaling tier, and private RDS PostgreSQL tier across two Availability Zones. The base design deliberately has no SSH, no public EC2 IPs, and no NAT gateway.
+
+**Stack:** Terraform · VPC · ALB · EC2 Auto Scaling · RDS · Security Groups · CloudWatch
 
 ### [Python Safe File Organizer](https://github.com/yourclouddude/python-safe-file-organizer)
 
-A safety-first Python automation project that organizes files without silently overwriting data.
+A file organizer that treats automation as something that can damage data if it is designed carelessly. It plans before mutation, refuses silent overwrites, records completed moves, and supports rollback without pretending the filesystem is transactional.
 
-**Learn:**
-- `pathlib` and filesystem automation
-- CLI design
-- preview-before-change workflows
-- collision-safe file operations
-- JSON manifests and rollback
-- error recovery
-- pytest and Ruff
-- GitHub Actions CI
+**Stack:** Python · `pathlib` · CLI · pytest · Ruff · GitHub Actions
 
-## How These Repositories Are Built
+## Explore by area
 
-A YourCloudDude project should include more than working code.
+**AWS & serverless**  
+[URL Shortener](https://github.com/yourclouddude/aws-serverless-url-shortener) · [Event-Driven Image Pipeline](https://github.com/yourclouddude/aws-event-driven-image-pipeline)
 
-Where relevant, repositories aim to include:
+**Infrastructure as Code & networking**  
+[Terraform AWS Three-Tier Web Stack](https://github.com/yourclouddude/terraform-aws-three-tier-web-stack)
 
-- a clear problem statement
-- architecture or execution flow
-- step-by-step setup
-- readable implementation
-- automated tests
-- CI validation
-- security considerations
-- cost awareness
-- failure and troubleshooting guidance
-- engineering trade-offs
-- exercises to extend the project
-- interview questions to test understanding
+**Python engineering**  
+[Safe File Organizer](https://github.com/yourclouddude/python-safe-file-organizer)
 
-## Tech Focus
+## What to look for in these repositories
 
-**Cloud**  
-AWS • Serverless • IAM • API Gateway • Lambda • DynamoDB • S3 • Networking
+The goal is not to collect hundreds of shallow projects or make every repository follow the same template.
 
-**Python**  
-Automation • CLI Tools • APIs • Testing • File Processing • Backend Engineering
+When a project needs it, you will find tests, CI, architecture notes, failure handling, security boundaries, cost discussion, troubleshooting, and explicit limitations. The important part is that those things come from the actual implementation rather than being added as portfolio decoration.
 
-**Infrastructure & Delivery**  
-AWS SAM • Terraform • Docker • GitHub Actions • CI/CD
+A useful way to work through a repo is to get it running, change one assumption, break a boundary on purpose, and then explain why the resulting failure happened.
 
-**Data & Backend**  
-PostgreSQL • DynamoDB • Redis / Valkey • REST APIs
+If you can explain **why the system is shaped this way and what you would change next**, the project has done its job.
 
-## Learn by Building
+## Current technical focus
 
-The goal is not to collect hundreds of shallow repositories.
+**AWS:** serverless systems, event-driven architecture, IAM, S3, SQS, Lambda, API Gateway, DynamoDB, VPC networking, ALB, EC2, RDS  
+**Python:** automation, CLI tools, backend logic, testing, safe file operations  
+**Infrastructure:** Terraform, AWS SAM, GitHub Actions, CI/CD, security boundaries, cost-aware design
 
-The goal is to build fewer, better projects that help learners answer questions like:
+## YourCloudDude
 
-- Why was this architecture chosen?
-- What could fail?
-- What are the security boundaries?
-- What would become the bottleneck first?
-- How would the design change with more traffic?
-- What does it cost to operate?
-- What trade-offs were made?
-
-If you can build the project **and explain those decisions**, you understand it at a much deeper level.
-
-## About YourCloudDude
-
-YourCloudDude creates practical AWS, cloud, and Python learning resources focused on real projects, architecture, and implementation.
+YourCloudDude creates practical technical learning resources around AWS, cloud architecture, Python, and building real projects.
 
 **Website:** https://yourclouddude.com/  
 **X:** https://x.com/yourclouddude
 
 ---
 
-**Explore the repositories, build the projects, break them, improve them, and document what you learn.**
+**Build the project. Break an assumption. Explain what happened.**
