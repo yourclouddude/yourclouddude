@@ -1,178 +1,123 @@
-<div align="center">
+<p align="center">
+  <img src="./assets/cloud-workshop.svg" width="100%" alt="YourCloudDude's cloud workshop: a pixel-art robot, a laptop, a message queue and connected server islands. Build it. Understand it. Explain it." />
+</p>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:2563EB,50:7C3AED,100:06B6D4&text=YourCloudDude&fontColor=ffffff&fontSize=56&fontAlignY=36&desc=Cloud%20%7C%20AWS%20%7C%20Python%20%7C%20Terraform&descAlignY=57&descSize=18&animation=fadeIn" alt="YourCloudDude banner" />
+<p align="center">
+  <b>Practical cloud projects for developers who learn by building.</b><br />
+  AWS architecture, Python automation, and infrastructure as code.
+</p>
 
-### Build it. Understand it. Explain it.
+<p align="center">
+  <a href="https://yourclouddude.com/">Website &amp; guides</a> &nbsp; / &nbsp;
+  <a href="#on-the-workbench">Explore the projects</a> &nbsp; / &nbsp;
+  <a href="https://x.com/yourclouddude">Find me on X</a>
+</p>
 
-Practical **AWS, Cloud, Terraform, and Python** projects for developers who learn by building.
+## Welcome to my workshop
 
-[![Website](https://img.shields.io/badge/Website-yourclouddude.com-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white)](https://yourclouddude.com/)
-[![X](https://img.shields.io/badge/X-@yourclouddude-111827?style=for-the-badge&logo=x&logoColor=white)](https://x.com/yourclouddude)
-[![GitHub](https://img.shields.io/badge/GitHub-yourclouddude-7C3AED?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yourclouddude)
+I'm **YourCloudDude**. I build and share projects that make cloud engineering easier to understand, from a small Python tool to an AWS system with queues, private networks, and infrastructure you can read.
 
-</div>
+Getting something to run is the starting point. I care about the questions that come next: **why this design, what can fail, and how do you find out?** My repositories explore those decisions through code, architecture notes, tests, and experiments you can try yourself.
 
----
+## On the workbench
 
-## About YourCloudDude
-
-Most tutorial repositories stop when the happy path works. These projects spend more time on the parts that make a design worth discussing: **why a boundary exists, what can fail, what should never be public, and what changes when the system grows.**
-
-The goal is simple: build projects you can not only run, but **understand, debug, defend, and explain.**
-
----
-
-## Tech I Work With
-
-<div align="center">
-
-![AWS](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonwebservices&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Terraform](https://img.shields.io/badge/Terraform-844FBA?style=for-the-badge&logo=terraform&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=111827)
-
-![Lambda](https://img.shields.io/badge/AWS_Lambda-FF9900?style=flat-square&logo=awslambda&logoColor=white)
-![S3](https://img.shields.io/badge/Amazon_S3-569A31?style=flat-square&logo=amazons3&logoColor=white)
-![DynamoDB](https://img.shields.io/badge/DynamoDB-4053D6?style=flat-square&logo=amazondynamodb&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![Pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white)
-
-</div>
-
----
-
-## Featured Projects
+Pick a system you'd like to understand. Each project gives you a different design decision to investigate.
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### 🔗 AWS Serverless URL Shortener
+<a href="https://github.com/yourclouddude/aws-serverless-url-shortener"><img src="./assets/project-serverless.svg" width="100%" alt="Serverless URL shortener: HTTP to Lambda to DynamoDB. Explore collisions, expiration, and IAM." /></a>
 
-A serverless API where the useful lessons are bigger than shortening a URL: conditional DynamoDB writes, short-code collisions, application-level expiration, IAM boundaries, and public endpoint controls.
+**[AWS Serverless URL Shortener](https://github.com/yourclouddude/aws-serverless-url-shortener)**
 
-**Stack**
+Build a small API, then follow the decisions behind collision-safe writes, expiring links, and separate read/write permissions.
 
-![API Gateway](https://img.shields.io/badge/API_Gateway-FF4F8B?style=flat-square&logo=amazonapigateway&logoColor=white)
-![Lambda](https://img.shields.io/badge/Lambda-FF9900?style=flat-square&logo=awslambda&logoColor=white)
-![DynamoDB](https://img.shields.io/badge/DynamoDB-4053D6?style=flat-square&logo=amazondynamodb&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-
-[**View project →**](https://github.com/yourclouddude/aws-serverless-url-shortener)
+`API Gateway` · `Lambda` · `DynamoDB` · `Python`
 
 </td>
 <td width="50%" valign="top">
 
-### 🖼️ AWS Event-Driven Image Pipeline
+<a href="https://github.com/yourclouddude/aws-event-driven-image-pipeline"><img src="./assets/project-pipeline.svg" width="100%" alt="Event-driven image pipeline: S3 uploads pass through a queue to a worker. Explore buffering, retries, and failure isolation." /></a>
 
-An asynchronous image-processing pipeline built around a deliberate `S3 → SQS → Lambda` boundary. It explores buffering, partial batch failures, poison messages, DLQs, and safer image processing.
+**[AWS Event-Driven Image Pipeline](https://github.com/yourclouddude/aws-event-driven-image-pipeline)**
 
-**Stack**
+Follow an upload through S3, SQS, and Lambda. See how buffering, duplicate events, partial failures, and a dead-letter queue change the design.
 
-![S3](https://img.shields.io/badge/S3-569A31?style=flat-square&logo=amazons3&logoColor=white)
-![SQS](https://img.shields.io/badge/SQS-FF4F8B?style=flat-square&logo=amazonsqs&logoColor=white)
-![Lambda](https://img.shields.io/badge/Lambda-FF9900?style=flat-square&logo=awslambda&logoColor=white)
-![CloudWatch](https://img.shields.io/badge/CloudWatch-759C3E?style=flat-square&logo=amazoncloudwatch&logoColor=white)
-
-[**View project →**](https://github.com/yourclouddude/aws-event-driven-image-pipeline)
+`S3` · `SQS` · `Lambda` · `CloudWatch`
 
 </td>
 </tr>
-
 <tr>
 <td width="50%" valign="top">
 
-### 🏗️ Terraform AWS Three-Tier Web Stack
+<a href="https://github.com/yourclouddude/terraform-aws-three-tier-web-stack"><img src="./assets/project-terraform.svg" width="100%" alt="Terraform three-tier AWS stack: a public load balancer leads to private application and database tiers." /></a>
 
-A Terraform project focused on real network boundaries: public ALB, private EC2 Auto Scaling, and private RDS PostgreSQL across two Availability Zones—with no SSH, public EC2 IPs, or unnecessary NAT gateway in the base design.
+**[Terraform AWS Three-Tier Web Stack](https://github.com/yourclouddude/terraform-aws-three-tier-web-stack)**
 
-**Stack**
+Trace a request from a public ALB to private EC2 and RDS. Explore security groups, network boundaries, and the choice to leave NAT out of the base stack.
 
-![Terraform](https://img.shields.io/badge/Terraform-844FBA?style=flat-square&logo=terraform&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazonwebservices&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-
-[**View project →**](https://github.com/yourclouddude/terraform-aws-three-tier-web-stack)
+`Terraform` · `VPC` · `EC2` · `RDS PostgreSQL`
 
 </td>
 <td width="50%" valign="top">
 
-### 🐍 Python Safe File Organizer
+<a href="https://github.com/yourclouddude/python-safe-file-organizer"><img src="./assets/project-python.svg" width="100%" alt="Python safe file organizer: preview a move plan before applying it, keep a manifest, and support undo." /></a>
 
-A file organizer that treats automation as something that can damage data if designed carelessly. It plans before mutation, prevents silent overwrites, records completed moves, and supports rollback.
+**[Python Safe File Organizer](https://github.com/yourclouddude/python-safe-file-organizer)**
 
-**Stack**
+Automate a messy folder with a read-only plan, collision-safe names, a move manifest, and rollback. Learn what an undo command can and cannot promise.
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/CI-2088FF?style=flat-square&logo=githubactions&logoColor=white)
-
-[**View project →**](https://github.com/yourclouddude/python-safe-file-organizer)
+`Python` · `CLI` · `pytest` · `GitHub Actions`
 
 </td>
 </tr>
 </table>
 
----
+### Start small with Python
 
-## Explore by Area
+The **[Python Project Showcase](https://github.com/yourclouddude/python-project-showcase)** has four local builds: an expense tracker, a bookstore API, an invoice generator, and a portfolio generator. Start with sample input, inspect the output, then work through the practice exercises.
 
-| Area | Projects | Focus |
-|---|---|---|
-| ☁️ **AWS & Serverless** | [URL Shortener](https://github.com/yourclouddude/aws-serverless-url-shortener) · [Image Pipeline](https://github.com/yourclouddude/aws-event-driven-image-pipeline) | Lambda, APIs, queues, storage, IAM |
-| 🏗️ **Infrastructure as Code** | [Three-Tier AWS Stack](https://github.com/yourclouddude/terraform-aws-three-tier-web-stack) | Terraform, networking, ALB, EC2, RDS |
-| 🐍 **Python Engineering** | [Safe File Organizer](https://github.com/yourclouddude/python-safe-file-organizer) | automation, CLI design, testing, safe operations |
+## Tools on my workbench
 
----
+<img src="./assets/toolbelt.svg" width="100%" alt="AWS: Lambda, S3, SQS. Python: CLI, APIs, pytest. Terraform: VPC, EC2, RDS. Delivery: SAM, Git, GitHub Actions." />
 
-## What These Repositories Focus On
+My focus is **serverless and event-driven AWS**, **Python tools and APIs**, and **infrastructure as code**. The projects make room for failure handling, IAM boundaries, testing, cleanup, and cost trade-offs alongside the working implementation.
 
-```text
-Architecture decisions   → Why is the system shaped this way?
-Failure handling         → What breaks, and how does it recover?
-Security boundaries      → What should never be public?
-Testing & CI             → How do we know changes are safe?
-Cost awareness           → What does this design cost as it grows?
-Trade-offs               → What would we change at the next scale?
-```
+## Open the experiment notebook
 
-When a project needs it, you will find **tests, CI, architecture notes, failure handling, security boundaries, cost discussion, troubleshooting, and explicit limitations**. The important part is that those things come from the actual implementation rather than being added as portfolio decoration.
+<details>
+<summary><b>Break an assumption. Follow the evidence.</b></summary>
+<br />
 
-A useful way to work through a repo is to get it running, change one assumption, break a boundary on purpose, and then explain why the resulting failure happened.
+<img src="./assets/experiment.svg" width="100%" alt="The best test of a project? Change one assumption. Explain what happens." />
 
----
+These are experiments to try, with the question each one should help you answer:
 
-## Current Technical Focus
+| Project | Try this | Explain what you observe |
+| --- | --- | --- |
+| URL shortener | Request a link whose expiration has passed, before TTL cleanup removes it. | Why must the redirect handler check expiration itself? |
+| Image pipeline | Send a corrupt image alongside valid images. | How does partial batch failure keep good work from retrying? |
+| Three-tier stack | Block the application's path to the database. | Why can the load balancer still see a healthy web process? |
+| File organizer | Create a file with a name that already exists at the destination. | How does the plan protect the existing file? |
 
-<table>
-<tr>
-<td>☁️ <b>AWS</b></td>
-<td>Serverless systems, event-driven architecture, IAM, S3, SQS, Lambda, API Gateway, DynamoDB, VPC, ALB, EC2, RDS</td>
-</tr>
-<tr>
-<td>🐍 <b>Python</b></td>
-<td>Automation, CLI tools, backend logic, testing, safe file operations</td>
-</tr>
-<tr>
-<td>🏗️ <b>Infrastructure</b></td>
-<td>Terraform, AWS SAM, GitHub Actions, CI/CD, security boundaries, cost-aware design</td>
-</tr>
-</table>
+Use the repository instructions to run an experiment and clean up afterward. Write down your prediction first, then compare it with the result.
 
----
+</details>
 
-<div align="center">
+<details>
+<summary><b>Where should I start?</b></summary>
+<br />
 
-### Learn by building systems you can explain.
+- **New to Python projects?** Start with the [expense tracker](https://github.com/yourclouddude/python-project-showcase/tree/main/projects/06) and follow the sample data.
+- **Want a first serverless system?** Try the [URL shortener](https://github.com/yourclouddude/aws-serverless-url-shortener) and trace one request.
+- **Curious about async systems?** Open the [image pipeline](https://github.com/yourclouddude/aws-event-driven-image-pipeline) and ask why the queue is there.
+- **Want to understand AWS networking?** Read the [three-tier stack](https://github.com/yourclouddude/terraform-aws-three-tier-web-stack) and follow the security group rules.
 
-[![Explore Projects](https://img.shields.io/badge/Explore_My_Projects-2563EB?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yourclouddude?tab=repositories)
-[![Visit YourCloudDude](https://img.shields.io/badge/Visit_YourCloudDude-7C3AED?style=for-the-badge&logo=googlechrome&logoColor=white)](https://yourclouddude.com/)
+</details>
 
-**Build the project. Break an assumption. Explain what happened.**
+## Keep building with me
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=0:06B6D4,50:7C3AED,100:2563EB" alt="footer" />
+Find guides and more projects at **[yourclouddude.com](https://yourclouddude.com/)**, follow **[@yourclouddude on X](https://x.com/yourclouddude)**, or browse **[all my repositories](https://github.com/yourclouddude?tab=repositories)**.
 
-</div>
+<a href="https://yourclouddude.com/"><img src="./assets/footer.svg" width="100%" alt="See you in the next build. Visit yourclouddude.com." /></a>
