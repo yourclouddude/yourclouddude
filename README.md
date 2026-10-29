@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/cloud-workshop.svg" width="100%" alt="YourCloudDude's cloud workshop: a pixel-art robot, a laptop, a message queue and connected server islands. Build it. Understand it. Explain it." />
+  <img src="./assets/cloud-workshop.svg?v=2" width="100%" alt="YourCloudDude's cloud workshop: a pixel-art robot, a laptop, a message queue and connected server islands. Build it. Understand it. Explain it." />
 </p>
 
 <p align="center">
@@ -27,7 +27,7 @@ Pick a system you'd like to understand. Each project gives you a different desig
 <tr>
 <td width="50%" valign="top">
 
-<a href="https://github.com/yourclouddude/aws-serverless-url-shortener"><img src="./assets/project-serverless.svg" width="100%" alt="Serverless URL shortener: HTTP to Lambda to DynamoDB. Explore collisions, expiration, and IAM." /></a>
+<a href="https://github.com/yourclouddude/aws-serverless-url-shortener"><img src="./assets/project-serverless.svg?v=2" width="100%" alt="Serverless URL shortener: HTTP to Lambda to DynamoDB. Explore collisions, expiration, and IAM." /></a>
 
 **[AWS Serverless URL Shortener](https://github.com/yourclouddude/aws-serverless-url-shortener)**
 
@@ -38,7 +38,7 @@ Build a small API, then follow the decisions behind collision-safe writes, expir
 </td>
 <td width="50%" valign="top">
 
-<a href="https://github.com/yourclouddude/aws-event-driven-image-pipeline"><img src="./assets/project-pipeline.svg" width="100%" alt="Event-driven image pipeline: S3 uploads pass through a queue to a worker. Explore buffering, retries, and failure isolation." /></a>
+<a href="https://github.com/yourclouddude/aws-event-driven-image-pipeline"><img src="./assets/project-pipeline.svg?v=2" width="100%" alt="Event-driven image pipeline: S3 uploads pass through a queue to a worker. Explore buffering, retries, and failure isolation." /></a>
 
 **[AWS Event-Driven Image Pipeline](https://github.com/yourclouddude/aws-event-driven-image-pipeline)**
 
@@ -51,7 +51,7 @@ Follow an upload through S3, SQS, and Lambda. See how buffering, duplicate event
 <tr>
 <td width="50%" valign="top">
 
-<a href="https://github.com/yourclouddude/terraform-aws-three-tier-web-stack"><img src="./assets/project-terraform.svg" width="100%" alt="Terraform three-tier AWS stack: a public load balancer leads to private application and database tiers." /></a>
+<a href="https://github.com/yourclouddude/terraform-aws-three-tier-web-stack"><img src="./assets/project-terraform.svg?v=2" width="100%" alt="Terraform three-tier AWS stack: a public load balancer leads to private application and database tiers." /></a>
 
 **[Terraform AWS Three-Tier Web Stack](https://github.com/yourclouddude/terraform-aws-three-tier-web-stack)**
 
@@ -62,7 +62,7 @@ Trace a request from a public ALB to private EC2 and RDS. Explore security group
 </td>
 <td width="50%" valign="top">
 
-<a href="https://github.com/yourclouddude/python-safe-file-organizer"><img src="./assets/project-python.svg" width="100%" alt="Python safe file organizer: preview a move plan before applying it, keep a manifest, and support undo." /></a>
+<a href="https://github.com/yourclouddude/python-safe-file-organizer"><img src="./assets/project-python.svg?v=2" width="100%" alt="Python safe file organizer: preview a move plan before applying it, keep a manifest, and support undo." /></a>
 
 **[Python Safe File Organizer](https://github.com/yourclouddude/python-safe-file-organizer)**
 
@@ -80,7 +80,7 @@ The **[Python Project Showcase](https://github.com/yourclouddude/python-project-
 
 ## Tools on my workbench
 
-<img src="./assets/toolbelt.svg" width="100%" alt="AWS: Lambda, S3, SQS. Python: CLI, APIs, pytest. Terraform: VPC, EC2, RDS. Delivery: SAM, Git, GitHub Actions." />
+<img src="./assets/toolbelt.svg?v=2" width="100%" alt="AWS: Lambda, S3, SQS. Python: CLI, APIs, pytest. Terraform: VPC, EC2, RDS. Delivery: SAM, Git, GitHub Actions." />
 
 My focus is **serverless and event-driven AWS**, **Python tools and APIs**, and **infrastructure as code**. The projects make room for failure handling, IAM boundaries, testing, cleanup, and cost trade-offs alongside the working implementation.
 
@@ -90,7 +90,7 @@ My focus is **serverless and event-driven AWS**, **Python tools and APIs**, and 
 <summary><b>Break an assumption. Follow the evidence.</b></summary>
 <br />
 
-<img src="./assets/experiment.svg" width="100%" alt="The best test of a project? Change one assumption. Explain what happens." />
+<img src="./assets/experiment.svg?v=2" width="100%" alt="The best test of a project? Change one assumption. Explain what happens." />
 
 These are experiments to try, with the question each one should help you answer:
 
@@ -120,4 +120,4 @@ Use the repository instructions to run an experiment and clean up afterward. Wri
 
 Find guides and more projects at **[yourclouddude.com](https://yourclouddude.com/)**, follow **[@yourclouddude on X](https://x.com/yourclouddude)**, or browse **[all my repositories](https://github.com/yourclouddude?tab=repositories)**.
 
-<a href="https://yourclouddude.com/"><img src="./assets/footer.svg" width="100%" alt="See you in the next build. Visit yourclouddude.com." /></a>
+<a href="https://yourclouddude.com/"><img src="./assets/footer.svg?v=2" width="100%" alt="See you in the next build. Visit yourclouddude.com." /></a>
